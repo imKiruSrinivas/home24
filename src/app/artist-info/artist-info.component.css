@@ -1,0 +1,27 @@
+.tp-card {
+    max-width: 200px;
+    max-height: 200px;
+    background-color: bisque;
+ }
+ .tp-header-image {
+    background-size: cover;
+ }
+ 
+ .img {
+   width: 100%;
+   margin-bottom: 18%;
+ }
+ .card-picture {
+   width: 23%;
+   margin-bottom: 2%;
+ }
+ .container {
+   min-height: 100%;
+   width: 100%;
+   background-color: antiquewhite;
+   border-block-color: red;
+ }
+ .search-form {
+   width: 90%;
+ }
+ 

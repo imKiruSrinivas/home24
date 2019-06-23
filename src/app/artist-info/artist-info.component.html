@@ -1,0 +1,46 @@
+
+<mat-form-field class="search-form">
+   <input matInput placeholder="Search Picture" type="text">
+</mat-form-field>
+<button button="submit" mat-raised-button color="primary">Search</button>
+<br>
+<div class="tp-card">
+<mat-card class="container" >
+   <mat-card-header>
+      <div mat-card-avatar >
+         <img mat-card-image src = "{{artistInfo.thumb_url ? artistInfo.thumb_url : null}}" alt = "Small Artist">
+      </div>
+      <mat-card-title>{{artistInfo.id }} {{artistInfo.name}}</mat-card-title>
+   </mat-card-header>
+   <mat-card-content>
+      <div>
+         <img mat-card-image src="{{artistInfo.image_url}}" alt = "Artist">
+         Tracker Count: {{artistInfo.tracker_count }}
+         Upcoming Event: {{artistInfo.upcoming_event_count}}
+      </div>
+   </mat-card-content>
+   <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+   </mat-card-actions>
+ </mat-card>
+
+</div>
+
+<!-- <mat-card class = "tp-card" *ngFor="let artist of artistInfo">
+  <mat-card-header>
+     <mat-card-title>{{artist.id? artist.id : artistInfo.id}}</mat-card-title>
+     <mat-card-subtitle>{{artist.name ? artist.nam : artistInfo.name}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+     <div>
+        <img mat-card-image src = "{{artist.image_url ? artist.image_url : artistInfo.image_url}}" alt = "Artist">
+      Tracker Count: {{artist.tracker_count ? artist.tracker_count : artistInfo.tracker_count }}
+      Upcoming Event: {{artist.upcoming_event_count ? artist.upcoming_event_count : artistInfo.upcoming_event_count}}
+     </div>
+  </mat-card-content>
+  <mat-card-actions>
+     <button mat-button>LIKE</button>
+     <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card> -->
