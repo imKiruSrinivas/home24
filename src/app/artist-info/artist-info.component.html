@@ -1,22 +1,21 @@
 
-<mat-form-field class="search-form">
-   <input matInput placeholder="Search Picture" type="text">
-</mat-form-field>
-<button button="submit" mat-raised-button color="primary">Search</button>
+ <input  #searchValue placeholder="Search Picture" type="text">
+
+<button button="submit" (click)="search(searchValue)" mat-raised-button color="primary">Search</button>
 <br>
 <div class="tp-card">
 <mat-card class="container" >
    <mat-card-header>
       <div mat-card-avatar >
-         <img mat-card-image src = "{{artistInfo.thumb_url ? artistInfo.thumb_url : null}}" alt = "Small Artist">
+         <img mat-card-image src = "{{artistInfo?.thumb_url ? artistInfo.thumb_url : null}}" alt = "Small Artist">
       </div>
-      <mat-card-title>{{artistInfo.id }} {{artistInfo.name}}</mat-card-title>
+      <mat-card-title>{{artistInfo?.id }} {{artistInfo?.name}}</mat-card-title>
    </mat-card-header>
    <mat-card-content>
       <div>
-         <img mat-card-image src="{{artistInfo.image_url}}" alt = "Artist">
-         Tracker Count: {{artistInfo.tracker_count }}
-         Upcoming Event: {{artistInfo.upcoming_event_count}}
+         <img mat-card-image src="{{artistInfo?.image_url}}" alt = "Artist">
+         Tracker Count: {{artistInfo?.tracker_count }}
+         Upcoming Event: {{artistInfo?.upcoming_event_count}}
       </div>
    </mat-card-content>
    <mat-card-actions>
